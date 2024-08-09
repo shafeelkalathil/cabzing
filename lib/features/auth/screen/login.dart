@@ -45,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
               Column(
                 children: [
-                  Text(CAppTexts.dontHaveAccount,style: ,),
+                  Text(CAppTexts.dontHaveAccount,style: TextStyle(color: Colors.white,fontFamily:),),
                   Text("data"),
                   Text("data"),
                 ],
