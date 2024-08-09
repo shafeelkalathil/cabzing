@@ -7,6 +7,7 @@ class CAppTexts{
   static const loginSubTitle="Login to your vikn account";
   static const signIn="Sign in";
   static const signUpNow="sign up now!";
+  static const dontHaveAccount="Don't have an Account?";
 
   static const username="Username";
   static const password="Password";

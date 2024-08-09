@@ -24,12 +24,10 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    screenHeight = MediaQuery.of(context).size.height;
-    screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(15.0),
+          padding: EdgeInsets.all(screenWidth * 0.08),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -38,7 +36,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Image(image: AssetImage(ImageConstants.languageIcon)),
-                  Text("English")
+                  SizedBox(width: screenWidth * 0.01,),
+                  const Text("English")
                 ],
               ),
               
@@ -46,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
               Column(
                 children: [
-                  Text("data"),
+                  Text(CAppTexts.dontHaveAccount,style: ,),
                   Text("data"),
                   Text("data"),
                 ],
