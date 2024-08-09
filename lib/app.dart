@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'common/utils/theme/theme.dart';
 import 'features/auth/screen/login.dart';
 import 'features/invoice/screen/invoice.dart';
+import 'features/spalsh/screen/splash.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -12,7 +13,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
       darkTheme: CAppTheme.darkTheme,
-      home:  LoginScreen()
+      home:  SplashScreen()
     );
   }
 }

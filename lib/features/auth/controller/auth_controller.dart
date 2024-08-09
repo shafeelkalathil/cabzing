@@ -50,10 +50,12 @@ class AuthController extends StateNotifier<bool> {
         if( userData["success"] == 6000 ){
           SharedPreferences prefs = await SharedPreferences.getInstance();
           final token = userData["data"]["access"];
+          final uid = userData['user_id'];
+          await prefs.setInt("uid", uid);
           await prefs.setString("token", token);
           print(userData['user_id']);
           print("idddddddddddddddddddd");
-          _ref.read(currentUserId.notifier).state = userData['user_id'];
+          _ref.read(currentUserId.notifier).state = uid;
           _ref.read(currentUserToken.notifier).state = token;
           CAppHelperFunction.showSnackBar(userData['message'], context);
           CAppHelperFunction.navigateToScreenAndRemoveUntil(context, const NavBar());
