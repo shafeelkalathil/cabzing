@@ -1,5 +1,6 @@
 import 'package:cabzing_driverapp/common/utils/constants/app_colors.dart';
 import 'package:cabzing_driverapp/common/utils/constants/dimensions.dart';
+import 'package:cabzing_driverapp/common/utils/constants/image_constants.dart';
 import 'package:cabzing_driverapp/common/utils/constants/text.dart';
 import 'package:cabzing_driverapp/common/utils/decoration/textformfield_decoration/textformfield_decoaration.dart';
 import 'package:cabzing_driverapp/features/auth/screen/widgets/login_form.dart';
@@ -36,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Image(image: AssetImage("assets/icons/language-hiragana.png")),
+                  Image(image: AssetImage(ImageConstants.languageIcon)),
                   Text("English")
                 ],
               ),

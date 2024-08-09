@@ -1,4 +1,5 @@
 import 'package:cabzing_driverapp/common/utils/constants/app_colors.dart';
+import 'package:cabzing_driverapp/features/invoice/screen/widgets/sales_details.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -49,32 +50,7 @@ class _InvoiceScreenState extends State<InvoiceScreen> {
             child: ListView.separated(
               shrinkWrap: true,
                 itemBuilder: (context, index) {
-                  return Padding(
-                    padding: EdgeInsets.all(screenWidth*0.05),
-                    child: Container(
-                      width: screenWidth,
-                      height: screenHeight * 0.06,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text("#InvoiceNo"),
-                              Text("name"),
-                            ],
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text('status'),
-                              Text('SAR 10,000'),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  );
+                  return SalesDetails(invoiceNo: '1052453576',customerName: "shafeel",status: "peding",amount: "1000",);
                 },
                 separatorBuilder: (context, index) {
                   return Divider(color: AppColors.borderColor,thickness: 0.6);
@@ -87,3 +63,5 @@ class _InvoiceScreenState extends State<InvoiceScreen> {
     );
   }
 }
+
+
