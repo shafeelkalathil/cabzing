@@ -8,10 +8,10 @@ class CTextFromFieldDecoration{
 
   static InputDecoration  userNameInputDecoration = InputDecoration (
     labelText: CAppTexts.username,
-    prefixIcon: Icon(Iconsax.user,color: AppColors.iconColor,),
+    prefixIcon: Icon(Iconsax.user,color: AppColors.primaryColor,),
     errorMaxLines: 2,
-    prefixIconColor: AppColors.iconColor,
-    suffixIconColor: AppColors.iconColor,
+    prefixIconColor: AppColors.primaryColor,
+    suffixIconColor: AppColors.primaryColor,
     labelStyle: const TextStyle().copyWith(fontSize: 14,color: Colors.white),
     hintStyle: const TextStyle().copyWith(fontSize: 14,color: Colors.white),
     errorStyle: const TextStyle().copyWith(fontFamily: "Poppins"),
@@ -56,8 +56,8 @@ class CTextFromFieldDecoration{
 
   static InputDecoration  passwordInputDecoration = InputDecoration (
     labelText: CAppTexts.password,
-    prefixIcon: Icon(Iconsax.key,color: AppColors.iconColor,),
-    suffixIcon: Icon(Iconsax.eye,color: AppColors.iconColor,),
+    prefixIcon: Icon(Iconsax.key,color: AppColors.primaryColor,),
+    suffixIcon: Icon(Iconsax.eye,color: AppColors.primaryColor,),
     errorMaxLines: 2,
     prefixIconColor: Colors.grey,
     suffixIconColor: Colors.grey,

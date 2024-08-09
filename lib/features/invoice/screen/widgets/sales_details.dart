@@ -1,3 +1,4 @@
+import 'package:cabzing_driverapp/common/utils/style/widget/text_style.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../common/utils/constants/dimensions.dart';
@@ -21,16 +22,28 @@ class SalesDetails extends StatelessWidget {
           children: [
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(invoiceNo),
-                Text(customerName),
+                Row(
+                  children: [
+                    Text("#",style: customTextStyle(color: Color(0xff7D7D7D),fontWeight: FontWeight.w400,fontSize: 14),),
+                    Text(invoiceNo,style: customTextStyle(fontWeight: FontWeight.w400,fontSize: 14),),
+                  ],
+                ),
+                Text(customerName,style: customTextStyle(fontWeight: FontWeight.w500,fontSize: 14),),
               ],
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Text(status),
-                Text('SAR $amount'),
+                Text(status,style: customTextStyle(fontSize: 13,fontWeight: FontWeight.w400,color: status == "Invoiced" ? Color(0xff1C60E2) :Color(0xff7D7D7D) ),),
+                Row(
+                  children: [
+                    Text("SAR. ",style: customTextStyle(color: Color(0xff888888),fontWeight: FontWeight.w400,fontSize: 14)),
+                    Text(amount,style: customTextStyle(fontWeight: FontWeight.w400,fontSize: 14),),
+                  ],
+                ),
               ],
             ),
           ],

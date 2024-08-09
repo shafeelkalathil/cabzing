@@ -35,8 +35,10 @@ class ProfileController extends StateNotifier<bool> {
 
   Future<UserModel> fetchUserData(BuildContext context) async {
     try {
+
       int userId = _ref.watch(currentUserId);
       String token = _ref.watch(currentUserToken);
+
 
       final res = await _profileRepository.fetchUserData(token, userId);
       return res.fold(

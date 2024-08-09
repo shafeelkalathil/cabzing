@@ -1,5 +1,6 @@
 import 'package:cabzing_driverapp/common/utils/helpers/helpers_function.dart';
 import 'package:cabzing_driverapp/features/invoice/screen/invoice.dart';
+import 'package:cabzing_driverapp/features/profile/screen/profile.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {

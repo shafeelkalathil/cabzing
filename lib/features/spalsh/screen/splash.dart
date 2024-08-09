@@ -31,7 +31,9 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
       print(userId);
       print(token);
       if( userId != 0 && token != "" && userId != null){
-        CAppHelperFunction.navigateToScreenAndRemoveUntil(context, LoginScreen());
+        ref.read(currentUserId.notifier).state = userId;
+        ref.read(currentUserToken.notifier).state = token!;
+        CAppHelperFunction.navigateToScreenAndRemoveUntil(context, NavBar());
       }else{
         CAppHelperFunction.navigateToScreenAndRemoveUntil(context, LoginScreen());
       }
@@ -51,7 +53,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image(image: AssetImage(ImageConstants.appLogo)),
-              LoadingAnimationWidget.horizontalRotatingDots(color: AppColors.iconColor, size: 50),
+              LoadingAnimationWidget.horizontalRotatingDots(color: AppColors.primaryColor, size: 50),
             ],
           ),
         )

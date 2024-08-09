@@ -1,4 +1,6 @@
 import 'package:cabzing_driverapp/common/utils/constants/dimensions.dart';
+import 'package:cabzing_driverapp/common/utils/constants/image_constants.dart';
+import 'package:cabzing_driverapp/common/utils/style/widget/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -17,40 +19,40 @@ class TProfileMenu extends StatelessWidget {
         children: [
           Expanded(
             child: ListTile(
-              title: Text("Help"),
-              leading: Icon(Iconsax.message_question),
+              title: Text("Help",style: customTextStyle(fontWeight: FontWeight.w400,fontSize: 15),),
+              leading: Image(image: AssetImage(ImageConstants.helpIcon)),
               trailing: Icon(Iconsax.arrow_right_34),
             ),
           ),
           Expanded(
             child: ListTile(
               hoverColor: Colors.white,
-              title: Text("FAQ"),
-              leading: Icon(Iconsax.search_favorite),
+              title: Text("FAQ",style: customTextStyle(fontWeight: FontWeight.w400,fontSize: 15),),
+              leading: Image(image: AssetImage(ImageConstants.faqIcon)),
               trailing: Icon(Iconsax.arrow_right_34),
             ),
           ),
           Expanded(
             child: ListTile(
               hoverColor: Colors.white,
-              title: Text("Invite Friends"),
-              leading: Icon(Iconsax.user_add),
+              title: Text("Invite Friends",style: customTextStyle(fontWeight: FontWeight.w400,fontSize: 15),),
+              leading: Image(image: AssetImage(ImageConstants.addUserIcon)),
               trailing: Icon(Iconsax.arrow_right_34),
             ),
           ),
           Expanded(
             child: ListTile(
               hoverColor: Colors.white,
-              title: Text("Terms of service"),
-              leading: Icon(Iconsax.shield_search),
+              title: Text("Terms of service",style: customTextStyle(fontWeight: FontWeight.w400,fontSize: 15),),
+              leading: Icon(Iconsax.shield_search,color: Color(0xffB5CDFE),),
               trailing: Icon(Iconsax.arrow_right_34),
             ),
           ),
           Expanded(
             child: ListTile(
               hoverColor: Colors.white,
-              title: Text("Privacy Policy"),
-              leading: Icon(Iconsax.shield_security2),
+              title: Text("Privacy Policy",style: customTextStyle(fontWeight: FontWeight.w400,fontSize: 15),),
+              leading: Image(image: AssetImage(ImageConstants.privacyPolicyIcon)),
               trailing: Icon(Iconsax.arrow_right_34),
             ),
           ),

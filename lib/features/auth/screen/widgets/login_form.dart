@@ -6,6 +6,7 @@ import '../../../../common/utils/constants/dimensions.dart';
 import '../../../../common/utils/constants/text.dart';
 import '../../../../common/utils/decoration/textformfield_decoration/textformfield_decoaration.dart';
 import '../../../../common/utils/helpers/helpers_function.dart';
+import '../../../../common/utils/style/widget/text_style.dart';
 import '../../../../common/utils/validators/validators.dart';
 import '../../../../model/user_login_model.dart';
 import '../../controller/auth_controller.dart';
@@ -39,9 +40,10 @@ class _LoginFormState extends ConsumerState<LoginForm> {
       key: _formKey,
       child: Column(
         children: [
-          Text(CAppTexts.loginTitle,style: Theme.of(context).textTheme.titleSmall,),
-          SizedBox(height: 30,),
-          Text(CAppTexts.loginSubTitle,style: Theme.of(context).textTheme.labelMedium,),
+          Text(CAppTexts.loginTitle,style: customTextStyle(fontWeight: FontWeight.w500,fontSize: 21)),
+          SizedBox(height: screenHeight * 0.008,),
+          Text(CAppTexts.loginSubTitle,style: customTextStyle(color: Color(0xff838383),fontSize: 15,fontWeight: FontWeight.w400)),
+          SizedBox(height: screenHeight * 0.045,),
           TextFormField(
             controller: userNameController,
             decoration: CTextFromFieldDecoration.userNameInputDecoration,
@@ -54,7 +56,9 @@ class _LoginFormState extends ConsumerState<LoginForm> {
             validator: (value) => CAppValidators.validatePassword(value),
             autovalidateMode: AutovalidateMode.onUserInteraction,
           ),
-          Text(CAppTexts.forgotPassword,style: TextStyle(color: AppColors.iconColor),),
+          SizedBox(height: screenHeight * 0.045,),
+          Text(CAppTexts.forgotPassword,style: customTextStyle(color: AppColors.primaryColor,fontWeight: FontWeight.w400,fontSize: 16)),
+          SizedBox(height: screenHeight * 0.045,),
           InkWell(
             onTap: () {
               UserLoginDataModel userLoginData = UserLoginDataModel(
@@ -74,9 +78,9 @@ class _LoginFormState extends ConsumerState<LoginForm> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(CAppTexts.signIn),
+                    Text(CAppTexts.signIn,style: customTextStyle(fontSize: 16,fontWeight: FontWeight.w400),),
                     SizedBox(width: screenWidth * 0.01,),
-                    Icon(Icons.arrow_right_alt_sharp,size: 20,)
+                    Icon(Icons.arrow_right_alt,size: 24,)
                   ],)),
           )
         ],
