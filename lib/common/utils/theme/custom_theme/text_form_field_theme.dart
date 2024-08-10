@@ -1,6 +1,4 @@
-import 'package:cabzing_driverapp/common/utils/constants/text.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 
 import '../../constants/app_colors.dart';
 

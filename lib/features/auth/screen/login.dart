@@ -2,16 +2,10 @@ import 'package:cabzing_driverapp/common/utils/constants/app_colors.dart';
 import 'package:cabzing_driverapp/common/utils/constants/dimensions.dart';
 import 'package:cabzing_driverapp/common/utils/constants/image_constants.dart';
 import 'package:cabzing_driverapp/common/utils/constants/text.dart';
-import 'package:cabzing_driverapp/common/utils/decoration/textformfield_decoration/textformfield_decoaration.dart';
 import 'package:cabzing_driverapp/common/utils/style/widget/text_style.dart';
 import 'package:cabzing_driverapp/features/auth/screen/widgets/login_form.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:iconsax/iconsax.dart';
 
-import '../../../common/utils/constants/dimensions.dart';
-import '../../../common/utils/constants/dimensions.dart';
-import '../../../common/utils/theme/custom_theme/text_form_field_theme.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -27,6 +21,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(screenWidth * 0.08),
@@ -43,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
               ),
 
-              LoginForm(),
+              const LoginForm(),
 
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,

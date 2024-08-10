@@ -20,7 +20,7 @@ class _LogOutButtonState extends State<LogOutButton> {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     preferences.remove("uid");
     preferences.remove("token");
-    CAppHelperFunction.showAlert("Are you sure?", "Do you want to logout", context, true, ()=> CAppHelperFunction.navigateToScreenAndRemoveUntil(context, LoginScreen()));
+    CAppHelperFunction.showAlert("Are you sure?", "Do you want to logout", context, true, ()=> CAppHelperFunction.navigateToScreenAndRemoveUntil(context, const LoginScreen()));
   }
 
   @override
@@ -32,15 +32,15 @@ class _LogOutButtonState extends State<LogOutButton> {
           onTap: () {
             logOut();
           },
-          child: Container(
+          child: SizedBox(
             width: screenWidth *0.4,
             height: screenHeight *0.08,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Iconsax.logout_1,color: Color(0xffEA6262),),
+                const Icon(Iconsax.logout_1,color: Color(0xffEA6262),),
                 SizedBox(width: screenWidth * 0.01,),
-                Text(CAppTexts.logout,style: customTextStyle(color: Color(0xffEA6262),fontWeight: FontWeight.w400,fontSize: 15),)
+                Text(CAppTexts.logout,style: customTextStyle(color: const Color(0xffEA6262),fontWeight: FontWeight.w400,fontSize: 15),)
               ],
             ),
           ),

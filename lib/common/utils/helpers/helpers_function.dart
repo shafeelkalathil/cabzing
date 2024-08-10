@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class CAppHelperFunction{
-
   static void showSnackBar(String message,BuildContext context){
     ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(message))
@@ -43,25 +42,6 @@ class CAppHelperFunction{
         builder: (context) => screen), (route) => false);
   }
 
-  static void splashAutoRedirected(BuildContext context,Widget isLoginScreen,bool isLogin,Widget screen){
-    Timer(const Duration(seconds: 3),() {
-      if(isLogin){
-        navigateToScreenAndRemoveUntil(context,isLoginScreen);
-      }
-      else{
-        navigateToScreenAndRemoveUntil(context,screen);
-      }
-    });
-  }
-
-  static double screenWidth(BuildContext context){
-    return MediaQuery.of(context).size.width;
-  }
-
-  static double screenHeight(BuildContext context){
-    return MediaQuery.of(context).size.height;
-  }
-
   static String getFormattedDate(DateTime date,{String format='dd MMM yyyy'}){
     return DateFormat(format).format(date);
   }
@@ -78,10 +58,6 @@ class CAppHelperFunction{
       // If parsing fails, return the current date
       return DateTime.now();
     }
-  }
-
-  static bool isDarkMood(BuildContext context){
-    return Theme.of(context).brightness == Brightness.dark;
   }
 
   static List<String> setSearchParam(String caseNumber) {

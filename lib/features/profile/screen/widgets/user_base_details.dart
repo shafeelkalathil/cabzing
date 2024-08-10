@@ -32,10 +32,10 @@ class UserBaseDetails extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(name,style: customTextStyle(fontWeight: FontWeight.w500,fontSize: 20),),
-              Text(email,style: customTextStyle(color: Color(0xffB5CDFE),fontWeight: FontWeight.w400,fontSize: 14))
+              Text(email,style: customTextStyle(color: const Color(0xffB5CDFE),fontWeight: FontWeight.w400,fontSize: 14))
             ],
           ),
-          Icon(Iconsax.edit)
+          const Icon(Iconsax.edit)
         ],
       ),
     );

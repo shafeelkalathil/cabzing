@@ -14,7 +14,7 @@ class SalesDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(screenWidth*0.05),
-      child: Container(
+      child: SizedBox(
         width: screenWidth,
         height: screenHeight * 0.06,
         child: Row(
@@ -26,7 +26,7 @@ class SalesDetails extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text("#",style: customTextStyle(color: Color(0xff7D7D7D),fontWeight: FontWeight.w400,fontSize: 14),),
+                    Text("#",style: customTextStyle(color: const Color(0xff7D7D7D),fontWeight: FontWeight.w400,fontSize: 14),),
                     Text(invoiceNo,style: customTextStyle(fontWeight: FontWeight.w400,fontSize: 14),),
                   ],
                 ),
@@ -37,10 +37,10 @@ class SalesDetails extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Text(status,style: customTextStyle(fontSize: 13,fontWeight: FontWeight.w400,color: status == "Invoiced" ? Color(0xff1C60E2) :Color(0xff7D7D7D) ),),
+                Text(status,style: customTextStyle(fontSize: 13,fontWeight: FontWeight.w400,color: status == "Invoiced" ? const Color(0xff1C60E2) :const Color(0xff7D7D7D) ),),
                 Row(
                   children: [
-                    Text("SAR. ",style: customTextStyle(color: Color(0xff888888),fontWeight: FontWeight.w400,fontSize: 14)),
+                    Text("SAR. ",style: customTextStyle(color: const Color(0xff888888),fontWeight: FontWeight.w400,fontSize: 14)),
                     Text(amount,style: customTextStyle(fontWeight: FontWeight.w400,fontSize: 14),),
                   ],
                 ),

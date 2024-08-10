@@ -1,7 +1,4 @@
 import 'package:cabzing_driverapp/common/utils/constants/dimensions.dart';
-import 'package:cabzing_driverapp/common/utils/constants/image_constants.dart';
-import 'package:cabzing_driverapp/common/utils/constants/text.dart';
-import 'package:cabzing_driverapp/features/auth/screen/login.dart';
 import 'package:cabzing_driverapp/features/profile/controller/profile_controller.dart';
 import 'package:cabzing_driverapp/features/profile/screen/widgets/logout_button.dart';
 import 'package:cabzing_driverapp/features/profile/screen/widgets/profile_menu.dart';
@@ -10,10 +7,8 @@ import 'package:cabzing_driverapp/features/profile/screen/widgets/user_rating_an
 import 'package:cabzing_driverapp/model/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
-import '../../../common/utils/helpers/helpers_function.dart';
 
 class ProfileScreen extends ConsumerStatefulWidget {
   const ProfileScreen({super.key});
@@ -25,11 +20,13 @@ class ProfileScreen extends ConsumerStatefulWidget {
 class _ProfileScreenState extends ConsumerState<ProfileScreen> {
 
   UserModel? userData;
+  bool isLoading = true ;
 
   Future<void> fetchData() async {
+
     userData = await ref.read(profileControllerProvider.notifier).fetchUserData(context);
     setState(() {
-
+      isLoading = false ;
     });
   }
 
@@ -42,16 +39,20 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.all(screenWidth*0.05),
-          child: Column(
-            children: [
-              UserBaseDetails(name: userData!.data.firstName + userData!.data.lastName,email: userData!.data.email,imageUrl: userData!.customerData.photo,isNetworkImage: false ),
-              const UserRatingAndKyc(),
-              LogOutButton(),
-              TProfileMenu()
-            ],
+      body: Skeletonizer(
+        enabled: isLoading,
+        enableSwitchAnimation: true,
+        child: SafeArea(
+          child: Padding(
+            padding: EdgeInsets.all(screenWidth*0.05),
+            child: Column(
+              children: [
+                if(userData!= null) UserBaseDetails(name: userData!.data.firstName + userData!.data.lastName,email: userData!.data.email,imageUrl: userData!.customerData.photo,isNetworkImage: false ),
+                const UserRatingAndKyc(),
+                const LogOutButton(),
+                const TProfileMenu()
+              ],
+            ),
           ),
         ),
       ),

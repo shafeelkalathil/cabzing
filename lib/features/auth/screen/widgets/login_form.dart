@@ -5,14 +5,13 @@ import '../../../../common/utils/constants/app_colors.dart';
 import '../../../../common/utils/constants/dimensions.dart';
 import '../../../../common/utils/constants/text.dart';
 import '../../../../common/utils/decoration/textformfield_decoration/textformfield_decoaration.dart';
-import '../../../../common/utils/helpers/helpers_function.dart';
 import '../../../../common/utils/style/widget/text_style.dart';
 import '../../../../common/utils/validators/validators.dart';
 import '../../../../model/user_login_model.dart';
 import '../../controller/auth_controller.dart';
 
 class LoginForm extends ConsumerStatefulWidget {
-  LoginForm({
+  const LoginForm({
     super.key,
   });
 
@@ -27,7 +26,6 @@ class _LoginFormState extends ConsumerState<LoginForm> {
   TextEditingController passwordController = TextEditingController();
 
   userLogin(UserLoginDataModel userLoginDataModel){
-    print(userLoginDataModel);
     if(_formKey.currentState!.validate()){
       ref.read(authControllerProvider.notifier).loginUser(context, userLoginDataModel);
     }
@@ -36,13 +34,14 @@ class _LoginFormState extends ConsumerState<LoginForm> {
 
   @override
   Widget build(BuildContext context) {
+    final isLoading = ref.watch(authControllerProvider);
     return Form(
       key: _formKey,
       child: Column(
         children: [
           Text(CAppTexts.loginTitle,style: customTextStyle(fontWeight: FontWeight.w500,fontSize: 21)),
           SizedBox(height: screenHeight * 0.008,),
-          Text(CAppTexts.loginSubTitle,style: customTextStyle(color: Color(0xff838383),fontSize: 15,fontWeight: FontWeight.w400)),
+          Text(CAppTexts.loginSubTitle,style: customTextStyle(color: const Color(0xff838383),fontSize: 15,fontWeight: FontWeight.w400)),
           SizedBox(height: screenHeight * 0.045,),
           TextFormField(
             controller: userNameController,
@@ -75,12 +74,12 @@ class _LoginFormState extends ConsumerState<LoginForm> {
                     borderRadius: BorderRadius.circular(50),
                     color: Colors.blue
                 ),
-                child: Row(
+                child: isLoading == true ? const Center(child: CircularProgressIndicator(),) :Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(CAppTexts.signIn,style: customTextStyle(fontSize: 16,fontWeight: FontWeight.w400),),
                     SizedBox(width: screenWidth * 0.01,),
-                    Icon(Icons.arrow_right_alt,size: 24,)
+                    const Icon(Icons.arrow_right_alt,size: 24,)
                   ],)),
           )
         ],

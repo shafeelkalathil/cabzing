@@ -18,13 +18,13 @@ class UserRatingAndKyc extends StatelessWidget {
         Container(
           width: screenWidth * 0.4,
           height: screenHeight * 0.15,
-          padding: EdgeInsets.only(left: 15),
+          padding: const EdgeInsets.only(left: 15),
           child: Row(
             children: [
               Container(
                 width: screenWidth * 0.12,
                 height: screenHeight * 0.12,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(30)),
                     color: Color(0xffB5CDFE)
                 ),
@@ -40,11 +40,11 @@ class UserRatingAndKyc extends StatelessWidget {
                   Row(
                     children: [
                       Text("4.3",style: customTextStyle(fontWeight: FontWeight.w400,fontSize: 18),),
-                      Icon(Iconsax.star1)
+                      const Icon(Iconsax.star1)
                     ],
                   ),
-                  Text('2,211',style: customTextStyle(color: Color(0xff565656),fontWeight: FontWeight.w400,fontSize: 14),),
-                  Text('rides',style: customTextStyle(color: Color(0xffB5CDFE),fontWeight: FontWeight.w400,fontSize: 14),)
+                  Text('2,211',style: customTextStyle(color: const Color(0xff565656),fontWeight: FontWeight.w400,fontSize: 14),),
+                  Text('rides',style: customTextStyle(color: const Color(0xffB5CDFE),fontWeight: FontWeight.w400,fontSize: 14),)
                 ],
               )
             ],
@@ -53,17 +53,17 @@ class UserRatingAndKyc extends StatelessWidget {
         Container(
           width: screenWidth * 0.4,
           height: screenHeight * 0.15,
-          padding: EdgeInsets.only(left: 15),
+          padding: const EdgeInsets.only(left: 15),
           child: Row(
             children: [
               Container(
                 width: screenWidth * 0.12,
                 height: screenHeight * 0.12,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(30)),
                     color: Color(0xffA9C9C5)
                 ),
-                child: Center(
+                child: const Center(
                   child: Icon(Iconsax.shield_tick),
                 ),
               ),
@@ -75,10 +75,10 @@ class UserRatingAndKyc extends StatelessWidget {
                   Row(
                     children: [
                       Text("KYC",style: customTextStyle(fontWeight: FontWeight.w400,fontSize: 18),),
-                      Icon(Iconsax.tick_circle)
+                      const Icon(Iconsax.tick_circle)
                     ],
                   ),
-                  Text('Verified',style: customTextStyle(color: Color(0xffA9C9C5),fontWeight: FontWeight.w400,fontSize: 14),)
+                  Text('Verified',style: customTextStyle(color: const Color(0xffA9C9C5),fontWeight: FontWeight.w400,fontSize: 14),)
                 ],
               )
             ],

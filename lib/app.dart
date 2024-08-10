@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:month_year_picker/month_year_picker.dart';
 import 'common/utils/theme/theme.dart';
-import 'features/auth/screen/login.dart';
-import 'features/invoice/screen/invoice.dart';
 import 'features/spalsh/screen/splash.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -13,7 +14,11 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.dark,
       darkTheme: CAppTheme.darkTheme,
-      home:  SplashScreen()
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        MonthYearPickerLocalizations.delegate,
+      ],
+      home:  const SplashScreen()
     );
   }
 }

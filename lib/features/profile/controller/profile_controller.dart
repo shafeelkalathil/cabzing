@@ -1,14 +1,9 @@
 
-import 'package:cabzing_driverapp/common/utils/type_def/failure.dart';
 import 'package:cabzing_driverapp/features/auth/controller/auth_controller.dart';
-import 'package:cabzing_driverapp/model/user_login_model.dart';
 import 'package:cabzing_driverapp/model/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:fpdart/fpdart.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import '../../../common/utils/helpers/helpers_function.dart';
-import '../../profile/screen/profile.dart';
 import '../repository/profile_repository.dart';
 
 

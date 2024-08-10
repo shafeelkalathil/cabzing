@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:ffi';
 import 'package:cabzing_driverapp/model/user_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fpdart/fpdart.dart';
@@ -15,10 +14,6 @@ class ProfileRepository{
     final String urlString = '${ApiConstants.baseUrl}${ApiConstants.users}${ApiConstants.usersView}$userId';
     final Uri url = Uri.parse(urlString);
 
-    print(url);
-    print(token);
-    print(userId);
-
     try {
       final response = await http.get(
         url,
@@ -32,11 +27,11 @@ class ProfileRepository{
         var data = jsonDecode(response.body);
         return Right(UserModel.fromJson(data)); // Return the UserModel
       } else {
-        print('Error: ${response.statusCode}');
+
         return Left(Failure(response.statusCode.toString()));
       }
     } catch (e) {
-      print('Exception: $e');
+
       return Left(Failure(e.toString()));
     }
   }

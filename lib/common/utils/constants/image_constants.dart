@@ -9,4 +9,5 @@ class ImageConstants{
   static String filterIcon = "assets/icons/filter-icon.png" ;
   static String languageIcon = "assets/icons/language-hiragana.png" ;
   static String appLogo = "assets/images/app-logo.png" ;
+  static String logo = "assets/images/google-optimize.png" ;
 }

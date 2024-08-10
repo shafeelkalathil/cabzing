@@ -1,14 +1,11 @@
 import 'dart:convert';
-import 'package:cabzing_driverapp/common/utils/helpers/helpers_function.dart';
 import 'package:cabzing_driverapp/common/utils/type_def/failure.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:http/http.dart' as http;
 import '../../../common/utils/constants/api_constants.dart';
-import '../../../common/utils/type_def/type_def.dart';
 import '../../../model/user_login_model.dart';
-import '../../invoice/screen/invoice.dart';
 
 final authRepositoryProvider = Provider((ref) => AuthRepository());
 

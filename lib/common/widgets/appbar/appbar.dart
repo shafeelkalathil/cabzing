@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import '../../utils/constants/app_colors.dart';
 import '../../utils/helpers/helpers_function.dart';
 
 class CAppBar extends StatelessWidget implements PreferredSizeWidget{

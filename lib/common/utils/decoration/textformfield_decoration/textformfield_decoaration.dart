@@ -8,7 +8,7 @@ class CTextFromFieldDecoration{
 
   static InputDecoration  userNameInputDecoration = InputDecoration (
     labelText: CAppTexts.username,
-    prefixIcon: Icon(Iconsax.user,color: AppColors.primaryColor,),
+    prefixIcon: const Icon(Iconsax.user,color: AppColors.primaryColor,),
     errorMaxLines: 2,
     prefixIconColor: AppColors.primaryColor,
     suffixIconColor: AppColors.primaryColor,
@@ -16,35 +16,35 @@ class CTextFromFieldDecoration{
     hintStyle: const TextStyle().copyWith(fontSize: 14,color: Colors.white),
     errorStyle: const TextStyle().copyWith(fontFamily: "Poppins"),
     floatingLabelStyle: const TextStyle().copyWith(color: Colors.white.withOpacity(0.8)),
-    border: OutlineInputBorder(
+    border: const OutlineInputBorder(
       borderRadius: BorderRadius.only(
         topLeft: Radius.circular(14),
         topRight: Radius.circular(14),
       ),
       borderSide: BorderSide(width: 2, color: AppColors.borderColor),
     ),
-    enabledBorder: OutlineInputBorder(
+    enabledBorder: const OutlineInputBorder(
       borderRadius: BorderRadius.only(
         topLeft: Radius.circular(14),
         topRight: Radius.circular(14),
       ),
       borderSide: BorderSide(width: 1, color: AppColors.borderColor),
     ),
-    focusedBorder: OutlineInputBorder(
+    focusedBorder: const OutlineInputBorder(
       borderRadius: BorderRadius.only(
         topLeft: Radius.circular(14),
         topRight: Radius.circular(14),
       ),
       borderSide: BorderSide(width: 1, color: AppColors.borderColor),
     ),
-    errorBorder: OutlineInputBorder(
+    errorBorder: const OutlineInputBorder(
       borderRadius: BorderRadius.only(
         topLeft: Radius.circular(14),
         topRight: Radius.circular(14),
       ),
       borderSide: BorderSide(width: 2, color: AppColors.borderColor),
     ),
-    focusedErrorBorder: OutlineInputBorder(
+    focusedErrorBorder: const OutlineInputBorder(
       borderRadius: BorderRadius.only(
         topLeft: Radius.circular(14),
         topRight: Radius.circular(14),
@@ -56,8 +56,8 @@ class CTextFromFieldDecoration{
 
   static InputDecoration  passwordInputDecoration = InputDecoration (
     labelText: CAppTexts.password,
-    prefixIcon: Icon(Iconsax.key,color: AppColors.primaryColor,),
-    suffixIcon: Icon(Iconsax.eye,color: AppColors.primaryColor,),
+    prefixIcon: const Icon(Iconsax.key,color: AppColors.primaryColor,),
+    suffixIcon: const Icon(Iconsax.eye,color: AppColors.primaryColor,),
     errorMaxLines: 2,
     prefixIconColor: Colors.grey,
     suffixIconColor: Colors.grey,
@@ -65,35 +65,35 @@ class CTextFromFieldDecoration{
     hintStyle: const TextStyle().copyWith(fontSize: 14,color: Colors.white),
     errorStyle: const TextStyle().copyWith(fontFamily: "Poppins"),
     floatingLabelStyle: const TextStyle().copyWith(color: Colors.white.withOpacity(0.8)),
-    border: OutlineInputBorder(
+    border: const OutlineInputBorder(
       borderRadius: BorderRadius.only(
         bottomLeft: Radius.circular(14),
         bottomRight: Radius.circular(14),
       ),
       borderSide: BorderSide(width: 1, color: AppColors.borderColor),
     ),
-    enabledBorder: OutlineInputBorder(
+    enabledBorder: const OutlineInputBorder(
       borderRadius: BorderRadius.only(
         bottomLeft: Radius.circular(14),
         bottomRight: Radius.circular(14),
       ),
       borderSide: BorderSide(width: 1, color: AppColors.borderColor),
     ),
-    focusedBorder: OutlineInputBorder(
+    focusedBorder: const OutlineInputBorder(
       borderRadius: BorderRadius.only(
         bottomLeft: Radius.circular(14),
         bottomRight: Radius.circular(14),
       ),
       borderSide: BorderSide(width: 1, color: AppColors.borderColor),
     ),
-    errorBorder: OutlineInputBorder(
+    errorBorder: const OutlineInputBorder(
       borderRadius: BorderRadius.only(
         bottomLeft: Radius.circular(14),
         bottomRight: Radius.circular(14),
       ),
       borderSide: BorderSide(width: 1, color: AppColors.borderColor),
     ),
-    focusedErrorBorder: OutlineInputBorder(
+    focusedErrorBorder: const OutlineInputBorder(
       borderRadius: BorderRadius.only(
         bottomLeft: Radius.circular(14),
         bottomRight: Radius.circular(14),

@@ -7,7 +7,7 @@ class CElevatedButtonTheme{
     style: ElevatedButton.styleFrom(
       elevation: 0,
       foregroundColor: Colors.white,
-      backgroundColor: Color(0xff1B2B30),
+      backgroundColor: const Color(0xff1B2B30),
       disabledForegroundColor: Colors.grey,
       disabledBackgroundColor: Colors.grey,
       side: const BorderSide(color: Colors.blue),
@@ -22,7 +22,7 @@ class CElevatedButtonTheme{
       style: ElevatedButton.styleFrom(
           elevation: 0,
           foregroundColor: Colors.white,
-          backgroundColor: Color(0xff1B2B30),
+          backgroundColor: const Color(0xff1B2B30),
           disabledForegroundColor: Colors.grey,
           disabledBackgroundColor: Colors.grey,
           side: const BorderSide(color: Colors.transparent),

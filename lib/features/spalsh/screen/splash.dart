@@ -1,7 +1,6 @@
 
 import 'package:cabzing_driverapp/features/auth/controller/auth_controller.dart';
 import 'package:cabzing_driverapp/features/auth/screen/login.dart';
-import 'package:cabzing_driverapp/features/home/screen/home.dart';
 import 'package:cabzing_driverapp/features/nav/screen/nav.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -28,14 +27,13 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
       SharedPreferences preferences = await SharedPreferences.getInstance();
       final userId = preferences.getInt("uid");
       final token = preferences.getString("token");
-      print(userId);
-      print(token);
+
       if( userId != 0 && token != "" && userId != null){
         ref.read(currentUserId.notifier).state = userId;
         ref.read(currentUserToken.notifier).state = token!;
-        CAppHelperFunction.navigateToScreenAndRemoveUntil(context, NavBar());
+        CAppHelperFunction.navigateToScreenAndRemoveUntil(context, const NavBar());
       }else{
-        CAppHelperFunction.navigateToScreenAndRemoveUntil(context, LoginScreen());
+        CAppHelperFunction.navigateToScreenAndRemoveUntil(context, const LoginScreen());
       }
 
     });

@@ -12,7 +12,7 @@ class TProfileMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: screenWidth,
       height: screenHeight * 0.4,
       child: Column(
@@ -21,7 +21,7 @@ class TProfileMenu extends StatelessWidget {
             child: ListTile(
               title: Text("Help",style: customTextStyle(fontWeight: FontWeight.w400,fontSize: 15),),
               leading: Image(image: AssetImage(ImageConstants.helpIcon)),
-              trailing: Icon(Iconsax.arrow_right_34),
+              trailing: const Icon(Iconsax.arrow_right_34),
             ),
           ),
           Expanded(
@@ -29,7 +29,7 @@ class TProfileMenu extends StatelessWidget {
               hoverColor: Colors.white,
               title: Text("FAQ",style: customTextStyle(fontWeight: FontWeight.w400,fontSize: 15),),
               leading: Image(image: AssetImage(ImageConstants.faqIcon)),
-              trailing: Icon(Iconsax.arrow_right_34),
+              trailing: const Icon(Iconsax.arrow_right_34),
             ),
           ),
           Expanded(
@@ -37,15 +37,15 @@ class TProfileMenu extends StatelessWidget {
               hoverColor: Colors.white,
               title: Text("Invite Friends",style: customTextStyle(fontWeight: FontWeight.w400,fontSize: 15),),
               leading: Image(image: AssetImage(ImageConstants.addUserIcon)),
-              trailing: Icon(Iconsax.arrow_right_34),
+              trailing: const Icon(Iconsax.arrow_right_34),
             ),
           ),
           Expanded(
             child: ListTile(
               hoverColor: Colors.white,
               title: Text("Terms of service",style: customTextStyle(fontWeight: FontWeight.w400,fontSize: 15),),
-              leading: Icon(Iconsax.shield_search,color: Color(0xffB5CDFE),),
-              trailing: Icon(Iconsax.arrow_right_34),
+              leading: const Icon(Iconsax.shield_search,color: Color(0xffB5CDFE),),
+              trailing: const Icon(Iconsax.arrow_right_34),
             ),
           ),
           Expanded(
@@ -53,7 +53,7 @@ class TProfileMenu extends StatelessWidget {
               hoverColor: Colors.white,
               title: Text("Privacy Policy",style: customTextStyle(fontWeight: FontWeight.w400,fontSize: 15),),
               leading: Image(image: AssetImage(ImageConstants.privacyPolicyIcon)),
-              trailing: Icon(Iconsax.arrow_right_34),
+              trailing: const Icon(Iconsax.arrow_right_34),
             ),
           ),
         ],

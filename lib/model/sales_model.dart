@@ -2,7 +2,6 @@
 //
 //     final salesModel = salesModelFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 SalesModel salesModelFromJson(String str) => SalesModel.fromJson(json.decode(str));
@@ -17,11 +16,11 @@ class SalesModel {
   String ledgerName;
   double totalGrossAmtRounded;
   double totalTaxRounded;
-  int grandTotalRounded;
+  double grandTotalRounded;
   String customerName;
   double totalTax;
   String status;
-  int grandTotal;
+  double grandTotal;
   bool isBillwised;
   String billwiseStatus;
 
@@ -50,11 +49,11 @@ class SalesModel {
     String? ledgerName,
     double? totalGrossAmtRounded,
     double? totalTaxRounded,
-    int? grandTotalRounded,
+    double? grandTotalRounded,
     String? customerName,
     double? totalTax,
     String? status,
-    int? grandTotal,
+    double? grandTotal,
     bool? isBillwised,
     String? billwiseStatus,
   }) =>
